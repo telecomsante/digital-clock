@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="./digital-alarm-icon.html">
 
 <!--
 `digital-clock`
@@ -9,8 +9,8 @@ a simple clock component
 
 Custom property | Description | Default
 ----------------|-------------|----------
-'--tsante-clock-alarm-icon' | mixin to define the size of the alarm icon | by default the size is 1vw
-'--tsante-clock-date-size'  | font-size of the date | by default 50% of the component's font-size
+'--digital-clock-alarm-icon' | mixin to define the size of the alarm icon | by default the size is 1vw
+'--digital-clock-date-size'  | font-size of the date | by default 50% of the component's font-size
 
 @demo demo/index.html
 @hero digital-clock.png
@@ -47,7 +47,7 @@ Custom property | Description | Default
     <div class="time">[[time]]</div>
     <div class="date">[[date]]</div>
     <div class="alarm" hidden=[[!_alarmDate]] >
-      <iron-icon icon="alarm"></iron-icon>
+      <iron-icon icon="digitalClockIcons:alarm"></iron-icon>
       <span>[[_alarmDate]]</span>
     </div>
   </template>
