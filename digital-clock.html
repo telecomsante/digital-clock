@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="./digital-alarm-icon.html">
 
 <!--
 `digital-clock`
@@ -47,7 +47,7 @@ Custom property | Description | Default
     <div class="time">[[time]]</div>
     <div class="date">[[date]]</div>
     <div class="alarm" hidden=[[!_alarmDate]] >
-      <iron-icon icon="alarm"></iron-icon>
+      <iron-icon icon="digitalClockIcons:alarm"></iron-icon>
       <span>[[_alarmDate]]</span>
     </div>
   </template>
