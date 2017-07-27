@@ -6,13 +6,16 @@
 
     <title>tsante-clock demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="../digital-clock.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
+      body {
+        font-family: Roboto, Helvetica;
+      }
       #clock1 {
         font-size:35px;
         width: 250px;
@@ -35,19 +38,19 @@
         </template>
       </demo-snippet>
       <demo-snippet>
-        <template is="dom-bind" id="clock3">
-          <digital-clock id='clock' locale="fr-FR" alarm='2017-01-25T17:30:00'></digital-clock>
-          <audio src="./Zen_Temple_Bell.mp3" id="alarm"></audio>
-          <script>
-            const clock3 = document.querySelector('#clock3');
-            let now = new Date()
-            now.setMinutes(now.getMinutes() + 1);
-            now.setSeconds(0);
-            clock3.$.clock.alarm = now.toISOString();
-            clock3.$.clock.addEventListener('clock-alarm', () => {
-              clock3.$.alarm.play();
-            },true);
-          </script>
+        <template>
+            <digital-clock id='clock3' locale="fr-FR" alarm='2017-07-27T13:50:00'></digital-clock>
+            <audio src="./Zen_Temple_Bell.mp3" id="alarm"></audio>
+            <script>
+              const clock3 = document.querySelector('#clock3');
+              let now = new Date()
+              now.setMinutes(now.getMinutes() + 1);
+              now.setSeconds(0);
+              clock3.alarm = now.toISOString()
+              clock3.addEventListener('clock-alarm', () => {
+                document.querySelector('#alarm').play();
+              },true);
+            </script>
         </template>
       </demo-snippet>
     </div>

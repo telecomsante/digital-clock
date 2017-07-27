@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
-    <title>tsante-clock</title>
-
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-
-    <link rel="import" href="../iron-component-page/iron-component-page.html">
-  </head>
-  <body>
-    <iron-component-page src="digital-clock.html"></iron-component-page>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="/bower_components/iron-component-page/iron-component-page.html">
+</head>
+<body>
+  <iron-component-page descriptor-url="analysis_digital-clock.json"
+  root-namespace="digital-clock"></iron-component-page>
+  <script>
+    window.location.hash = '#/elements/digital-clock'
+  </script>
+</body>
 </html>
