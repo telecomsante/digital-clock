@@ -1,3 +1,6 @@
+__v2.0.0__
+
+  - update to polymer 2.x
 
 __v1.0.2__
 
