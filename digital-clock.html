@@ -2,21 +2,6 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="./digital-alarm-icon.html">
 
-<!--
-`digital-clock`
-a simple clock component
-
-### Styling
-
-Custom property | Description | Default
-----------------|-------------|----------
-'--digital-clock-alarm-icon' | mixin to define the size of the alarm icon | by default the size is 1vw
-'--digital-clock-date-size'  | font-size of the date | by default 50% of the component's font-size
-
-@demo demo/index.html
-@hero digital-clock.png
--->
-
 <dom-module id="digital-clock">
   <template>
     <style>
@@ -56,6 +41,25 @@ Custom property | Description | Default
   </template>
 
   <script>
+    /**
+     * `digital-clock`
+     * a simple clock component
+     * 
+     * ![](digital-clock.png)
+     * 
+     * ### Styling
+     * 
+     * Custom property | Description | Default
+     * ----------------|-------------|----------
+     * '--digital-clock-alarm-icon' | mixin to define the size of the alarm icon | by default the size is 1vw
+     * '--digital-clock-date-size'  | font-size of the date | by default 50% of the component's font-size
+     * 
+     * @customElement
+     * @polymer
+     * @extends {Polymer.Element}
+     * @demo demo/index.html
+     * @hero digital-clock.png
+     */
     class DigitalClock extends Polymer.Element {
       static get is() {
         return 'digital-clock';
@@ -66,6 +70,8 @@ Custom property | Description | Default
           /**
           * the locale used to format the date and time
           * by default, it will use the navigator language
+          *
+          * ex : `en-US`, `fr-FR`
           * @type {Object}
           */
           locale: {
@@ -88,7 +94,9 @@ Custom property | Description | Default
           * alarm datetime
           *
           * The alarm datetime must be given in ISO 8601,
-          * in Zulu timezone ( GMT ).
+          * in Zulu timezone ( GMT ). 
+          * 
+          * ex : `2017-07-27T13:50:00`
           * @type {Object}
           */
           alarm: {
@@ -159,8 +167,9 @@ Custom property | Description | Default
         if(this.alarm && Math.trunc(date.valueOf() / 1000) == Math.trunc(new Date(this.alarm).valueOf() / 1000))  {
           /**
            * The event is fired when the alarm time is reached
+           *
            * @event clock-alarm
-           * @param {String} date the datetime of the alarm as given
+           * @param {string} date the datetime of the alarm as given
            */
           this.dispatchEvent(new CustomEvent('clock-alarm', {detail: {date: this.alarm}}));
           this._alarmDate = '';
