@@ -1,33 +1,32 @@
 {
   "name": "digital-clock",
-  "version":"1.0.2",
-  "description": "A simple clock component",
-  "license": "LICENSE.md",
-  "main": "digital-clock.html",
+  "version": "2.0.0",
+  "description": "A digital clock component",
   "authors": [
-    "Telecom Sante <dev@telecomsante.com>"
+    "Telecom-Santé Dev team"
   ],
   "keywords": [
     "web-components",
+    "web-component",
     "polymer",
     "clock",
-    "date",
-    "time",
     "alarm"
   ],
+  "main": "digital-clock.html",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/telecomsante/digital-clock.git"
+    "url": "git://github.com:telecomsante/digital-clock.git"
   },
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.12"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.1",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^2.0.1"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
-    "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
-  },
-  "ignore": []
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1"
+  }
 }
