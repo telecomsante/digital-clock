@@ -4,6 +4,10 @@
 
 A simple clock component, displaying the current date and time into the local format.
 
+It's possible to set an alarm.
+
+![](digital-clock.png)
+
 ## Quick example
 
 <!--
@@ -34,5 +38,3 @@ clock.addEventListener('clock-alarm', () => {
 ```
 
 The component is licensed under the [ISC License](LICENSE.md)
-
-Demo and doc are available on https://telecomsante.github.io/digital-clock/
